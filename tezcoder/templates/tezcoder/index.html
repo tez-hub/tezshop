@@ -1,0 +1,231 @@
+
+{% extends 'tezcoder/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!----------clothes slider------>
+    <div class="heading">
+        <h1>C L O T H E S &emsp; C O L L E C T I O N</h1>
+    </div>
+<!---------------swiper slider-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-----slide 1 ----->
+            {% for clothes in clothes %}
+            <div class="swiper-slide">
+                <div class="slider-box">
+                    <p class="item-title">New</p>
+                    <div class="img-box">
+                        <img class="shop-item-img" src="{{ clothes.img.url }}" alt="">
+                    </div>
+                    <p class="detail">{{ clothes.title }}</p>
+                        <span class="price">{{ clothes.price }}</span>
+                    
+                    <div class="cart">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-----slide 1 ----->
+        </div>
+    </div>
+<!----------swiper slider end---->
+<!----------clothes slider------>
+<div class="heading">
+    <h1> S H O E S &emsp; C O L L E C T I O N </h1>
+</div>
+<!-----------swiper slider------->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {% for shoes in shoes %}
+        
+            <!-----slide 1 ----->
+            <div class="swiper-slide">
+                <div class="slider-box">
+                    <p class="item-title">New</p>
+                    <div class="img-box">
+                        <img class="shop-item-img" src="{{ shoes.img.url }}" alt="">
+                    </div>
+                    <p class="detail">{{ shoes.title }}</p>
+                        <span class="price">{{ shoes.price }}</span>
+                    
+                    <div class="cart">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-----slide 1 ----->
+            {% endfor %}
+            
+        </div>
+    </div>
+<!----------swiper slider end---->
+<div class="heading">
+    <h1> W A T C H E S &emsp; C O L L E C T I O N </h1>
+</div>
+<!-----------swiper slider------->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {% for watch in watch %}
+            <!-----slide 1 ----->
+            
+            <div class="swiper-slide">
+                <div class="slider-box">
+                    <p class="item-title">New</p>
+                    <div class="img-box">
+                        <img class="shop-item-img" src="{{ watch.img.url }}" alt="">
+                    </div>
+                    <p class="shop-item detail">{{ watch.title }}</p>
+                        <span class="price">{{ watch.price }}</span>
+                    
+                    <div class="cart">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-----slide 1 ----->
+            {% endfor %}
+            
+            
+
+        </div>
+    </div>
+<!----------swiper slider end---->
+ <div class="heading">
+    <h1> H E A D G E A R &emsp; C O L L E C T I O N </h1>
+</div>
+<!-----------swiper slider------->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {% for cap in cap %}
+            <!-----slide 1 ----->
+            <div class="swiper-slide">
+                <div class="slider-box">
+                    <p class="item-title">New</p>
+                    <div class="img-box">
+                        <img class="shop-item-img" src="{{ cap.img.url }}" alt="">
+                    </div>
+                    <p class="detail">{{ cap.title }}</p>
+                        <span class="price"> {{ cap.price }}</span>
+                    
+                    <div class="cart">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-----slide 1 ----->
+            {% endfor %}
+            
+
+        </div>
+    </div>
+<!----------swiper slider end---->
+
+  <section class="container content-section">
+    <div class="heading">
+        <h1> C A R T </h1>
+    </div>
+    <section class="shoping-cart spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="shoping__product">Products</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Remove</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody class="cart-items">
+                                <tr class="cart-row">
+                                    <td class="shoping__cart__item">
+                                        <img src="./assets/shoes10.jpg" height="100" width="100" alt="">
+                                        <h5 class="cart-stuff">Boot</h5>
+                                    </td>
+                                    <td class="shoping__cart__price">
+                                        $55.00
+                                    </td>
+                                    <td class="shoping__cart__quantity">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input class="cart-quantity-input" type="number" value="1">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    
+                                    <td>
+                                        <button class="btn btn-danger" type="button">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr class="cart-row">
+                                    <td class="shoping__cart__item">
+                                        <img src="assets/dress10.jpg" height="100" width="100" alt="">
+                                        <h5 class="cart-stuff">Dress</h5>
+                                    </td>
+                                    <td class="shoping__cart__price">
+                                        $39.00
+                                    </td>
+                                    <td class="shoping__cart__quantity">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input class="cart-quantity-input" type="number" value="1">
+                                            </div>
+                                        </div>
+                                    </td>
+                                   
+                                    <td>
+                                        <button class="btn btn-danger" type="button">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr class="cart-row">
+                                    <td class="shoping__cart__item">
+                                        <img src="assets/watch10.jpg" height="100" width="100" alt="">
+                                        <h5 class="cart-stuff">Watch</h5>
+                                    </td>
+                                    <td class="shoping__cart__price">
+                                        $69.00
+                                    </td>
+                                    <td class="shoping__cart__quantity">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input class="cart-quantity-input" type="number" value="1">
+                                            </div>
+                                        </div>
+                                    </td>
+                                   
+                                    <td>
+                                        <button class="btn btn-danger" type="button">Remove</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="shoping__checkout">
+                        <h5>Cart Total</h5>
+                        <ul>
+                            <li class="cart-total-price">Total <span class="total-amount">$0</span></li>
+                        </ul>
+                        <button class="btn btn-primary purchase">PURCHASE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!---------cart end------------->
+
+
+<!--------------cart------------->
+{% endblock %}
